@@ -1,0 +1,15 @@
+Single Responsibility
+     Only one job to do
+Open Closed
+    Open for extension but closed for modifications
+Liskov's Substitution
+    Objects can be subtitutted by their subclasses
+Interface Segregation
+    Don't Depend on things you won't need
+Dependency Inversion
+    High-level modules should not depend upon low-level modules
+
+
+
+
+
