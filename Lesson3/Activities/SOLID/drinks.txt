@@ -1,0 +1,11 @@
+Lemonade
+$3
+
+Soda
+$2
+
+Coffee
+$1
+
+Orange Juice
+$4
