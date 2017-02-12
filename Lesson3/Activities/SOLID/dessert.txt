@@ -1,0 +1,15 @@
+Jelly
+Strawberry
+$2
+
+Flan
+Caramel Sauce
+$3
+
+Fruit Cocktail
+Pineapple, watermelon, ...
+$10
+
+Cheese Cake
+Blackberry Jelly
+$5

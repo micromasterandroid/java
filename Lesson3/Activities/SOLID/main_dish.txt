@@ -1,0 +1,34 @@
+Hamburguer
+Bread, Meat, Cheese
+French Fries, ketchup
+$8.00
+
+Pizza
+Cheese, Pepperoni, Tomato Sauce
+Extra ingredients
+$18.00
+
+Chicken
+Grilled
+Potato Mash, salad
+$15.00
+
+BBQ Ribs
+Pork with BBQ Sauce
+Onion Rings
+$23.00
+
+Tacos
+Pork, Avocado Sauce
+Pineapple, Parsley, onion
+$3.00
+
+Lasagna
+Pasta, Tomato Sauce, Cheese
+Bread with garlic butter
+$25
+
+Fish
+Tilapia, Salmon
+Tartar sauce, Lemon
+$30.00
