@@ -135,16 +135,16 @@ class Chef extends Thread {
     }
 
     public void run() {
-        int timetocook = 0, wichfood = 0;
+        int timetocook = 0, whichfood = 0;
         while(this.threadalive){
             timetocook = 2000 + 1000*randomgenerator.nextInt(3);
             
             try {
                 this.sleep(timetocook);
 
-                wichfood =  randomgenerator.nextInt(3);
+                whichfood =  randomgenerator.nextInt(3);
                 System.out.print("Chef on " + (timetocook/1000) + " seconds Cook a ");
-                switch(wichfood){
+                switch(whichfood){
                     case 0:
                         FoodStock.cooksellburger("cook");
                         System.out.println("burger");
@@ -194,12 +194,12 @@ class Entry extends Thread {
     }
 
     public void entry(int timecustomerenter){
-        int wichqueue = randomgenerator.nextInt(2);;
-        int wichfood = randomgenerator.nextInt(3);
+        int whichqueue = randomgenerator.nextInt(2);;
+        int whichfood = randomgenerator.nextInt(3);
         int timetodecide = 1000 + 1000*randomgenerator.nextInt(3);
         String foodname = "";
 
-        switch(wichfood){
+        switch(whichfood){
             case 0:
                 foodname = "burger";
                 break;
@@ -212,11 +212,11 @@ class Entry extends Thread {
         }
         
 
-        CustomerQueues.enterCustomer(wichqueue, 
+        CustomerQueues.enterCustomer(whichqueue, 
             new Customer(IDs++, timetodecide, foodname)
         );
 
-        System.out.println("Customer #" + IDs + " enters " + (timecustomerenter/1000) + "seconds later to queue " + (wichqueue + 1));
+        System.out.println("Customer #" + IDs + " enters " + (timecustomerenter/1000) + "seconds later to queue " + (whichqueue + 1));
     }
 
     public void end(){
@@ -225,10 +225,10 @@ class Entry extends Thread {
 }
 
 class Attender extends Thread {
-    private int wichqueue;
+    private int whichqueue;
     private boolean threadalive = true;
-    public Attender(int wichqueue) {
-        this.wichqueue = wichqueue;
+    public Attender(int whichqueue) {
+        this.whichqueue = whichqueue;
     }
 
     public void run() {
@@ -236,7 +236,7 @@ class Attender extends Thread {
         Customer customer;
 
         while(this.threadalive){
-            customer = CustomerQueues.attendCustomer(this.wichqueue);
+            customer = CustomerQueues.attendCustomer(this.whichqueue);
             
             if(customer != null){
                 try {
