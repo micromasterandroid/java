@@ -37,7 +37,7 @@ class PaperWork {
     }
 
     public String toString(){
-        return this.ID + " " + this.state + " " + typeofprocedure + " " + 
+        return this.ID + " " + this.state + " " + typeofprocedure + " " +
                 ( (automated) ? "Automated" : "Manual" ) +
                 "\n\t" + this.information;
     }
