@@ -8,7 +8,7 @@ public class URLConnectionReader {
       BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
       String inputLine;
       while((inputLine = in.readLine()) != null)
-        System.out.println(readLine);
+        System.out.println(inputLine);
       in.close();
     }
 }
