@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.parsers.DocumentBuilder; 
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 //These classes read the sample XML file and manage output:
 
@@ -16,7 +16,7 @@ public class DOMParser {
 
   public static void main(String[] args) throws Exception {
     //Get the DOM Builder Factory
-    DocumentBuilderFactory factory = 
+    DocumentBuilderFactory factory =
         DocumentBuilderFactory.newInstance();
 
     //Get the DOM Builder
@@ -24,9 +24,9 @@ public class DOMParser {
 
     //Load and Parse the XML document
     //Object document contains the complete XML as a Tree.
-    Document document = 
+    Document document =
       builder.parse(
-        ClassLoader.getSystemResourceAsStream("xml/student.xml"));
+        ClassLoader.getSystemResourceAsStream("student.xml"));
 
     List<Student> stdList = new ArrayList<>();
 
@@ -37,7 +37,7 @@ public class DOMParser {
 
       //We have encountered an <Student> tag.
       Node node = nodeList.item(i);
-      // Check if the current node is an instance of element 
+      // Check if the current node is an instance of element
       if (node instanceof Element) {
         Student std = new Student();
         // Check if the current node is a student tag
@@ -52,9 +52,9 @@ public class DOMParser {
         for (int j = 0; j < childNodes.getLength(); j++) {
           Node cNode = childNodes.item(j);
 
-          //Identifying the child tag of Student encountered. 
+          //Identifying the child tag of Student encountered.
           if (cNode instanceof Element) {
-            //We get the last child of the current tag, 
+            //We get the last child of the current tag,
             //the last child will be the text node
             String content = cNode.getLastChild().getNodeValue().trim();
             switch (cNode.getNodeName()) {

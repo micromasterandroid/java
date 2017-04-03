@@ -12,7 +12,7 @@ public class SAXParserDemo2 {
     SAXParserFactory parserFactor = SAXParserFactory.newInstance();
     SAXParser parser = parserFactor.newSAXParser();
     SAXHandler handler = new SAXHandler();
-    parser.parse(ClassLoader.getSystemResourceAsStream("xml/Student.xml"), 
+    parser.parse(ClassLoader.getSystemResourceAsStream("Student.xml"), 
                  handler);
   }
 }
@@ -31,8 +31,8 @@ class SAXHandler extends DefaultHandler {
 
   @Override
   //Triggered when the start of tag is found.
-  public void startElement(String uri, String localName, 
-                           String qName, Attributes attributes) 
+  public void startElement(String uri, String localName,
+                           String qName, Attributes attributes)
                            throws SAXException {
 
     switch(qName){
@@ -46,12 +46,12 @@ class SAXHandler extends DefaultHandler {
   }
 
   @Override
-  public void endElement(String uri, String localName, 
+  public void endElement(String uri, String localName,
                          String qName) throws SAXException {
    switch(qName){
      //Add the Student to list once end tag is found
      case "student":
-       stdList.add(std);       
+       stdList.add(std);
        break;
      //For all other end tags the Student has to be updated.
      case "firstName":
@@ -67,7 +67,7 @@ class SAXHandler extends DefaultHandler {
   }
 
   @Override
-  public void characters(char[] ch, int start, int length) 
+  public void characters(char[] ch, int start, int length)
           throws SAXException {
     content = String.copyValueOf(ch, start, length).trim();
   }

@@ -12,13 +12,13 @@ public class JSONParserDemo {
 	public static void main(String[] args) throws Exception {
 
       //Create the josnReader object with the file location
-		JsonReader reader = Json.createReader(new FileReader("xml/Student.json"));
+		JsonReader reader = Json.createReader(new FileReader("Student.json"));
 
-      // Creates the json tree structure 
+      // Creates the json tree structure
 		JsonStructure jsonst = reader.read();
 		JsonObject object = (JsonObject) jsonst;
-      // to navigate the The tree we will use a 
-      // custom method that recursively navigates 
+      // to navigate the The tree we will use a
+      // custom method that recursively navigates
       // the complete structure.
 
 		navigateTree(jsonst,"Student");
@@ -27,9 +27,9 @@ public class JSONParserDemo {
 	public static void navigateTree(JsonValue tree, String key) {
    		if (key != null)
     		System.out.print("Key " + key + ": ");
-      // Get the element value type, and 
-      // And depending on the type 
-      // will execute the code of the matching 
+      // Get the element value type, and
+      // And depending on the type
+      // will execute the code of the matching
       // condition of the switch statement.
    		switch(tree.getValueType()) {
       		case OBJECT:
