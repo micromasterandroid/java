@@ -26,7 +26,7 @@ public class DOMParser {
     //Object document contains the complete XML as a Tree.
     Document document =
       builder.parse(
-        ClassLoader.getSystemResourceAsStream("student.xml"));
+        ClassLoader.getSystemResourceAsStream("Student.xml"));
 
     List<Student> stdList = new ArrayList<>();
 
