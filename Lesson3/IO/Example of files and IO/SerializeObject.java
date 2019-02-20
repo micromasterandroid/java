@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -41,7 +40,7 @@ public class SerializeObject {
 
 class UserProfile implements java.io.Serializable {
     private String name, email, themecolor;
-    public transient String something;
+    private transient String something;
     
     public UserProfile(String name, String email, String themecolor, String something){
         this.name = name;
