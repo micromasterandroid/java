@@ -25,7 +25,7 @@ public class FileReaders {
                 input.close();
             }
             if (output != null){
-                input.close();
+                output.close();
             }
         }
     }
